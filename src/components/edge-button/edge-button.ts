@@ -32,8 +32,10 @@ export class EdgeButton {
 
 		if (path === "sound") {
 			this.renderState(state.sound.value as boolean);
-			this.root.onclick = () => {
-				playSound(sounds.tap);
+			this.root.onclick = (e) => {
+				e.stopPropagation();
+				e.preventDefault();
+				playSound(sounds.punch);
 				state.sound.value = !state.sound.value;
 				this.renderState(state.sound.value as boolean);
 			};
@@ -67,8 +69,10 @@ export class EdgeLinkButton {
 
 		if (typeof link === "function") {
 			this.root = el("div", iconElement);
-			this.root.onclick = () => {
-				playSound(sounds.tap);
+			this.root.onclick = (e) => {
+				e.stopPropagation();
+				e.preventDefault();
+				playSound(sounds.punch);
 				link();
 			};
 		} else {

@@ -9,7 +9,8 @@ export function el(tagAndClasses: string, content: null | string | HTMLElement |
 	});
 
 	if (typeof content === "string") {
-		setTextContent(element, content);
+		element.innerHTML = content;
+		// setTextContent(element, content);
 	} else if (Array.isArray(content)) {
 		content.forEach((item) => mount(element, item));
 	} else if (content != null) {

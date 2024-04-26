@@ -1,4 +1,4 @@
-# js13kgames-template
+# red-right-fist
 
 WIP
 
@@ -9,8 +9,8 @@ WIP
 Clone and install dependencies:
 
 ```bash
-git clone git@github.com:MartinTale/js13kgames-template.git
-cd js13kgames-template
+git clone git@github.com:MartinTale/red-right-fist.git
+cd red-right-fist
 npm i
 ```
 
@@ -44,6 +44,6 @@ npm run build
 
 [Salvatore Previti](https://github.com/SalvatorePreviti) for Terser configuration recommendations
 
-Graphics: [Micro Roguelike by Kenney](https://www.kenney.nl/assets/micro-roguelike)
+[Game Icons](https://game-icons.net/) and [Iconmonstr](https://iconmonstr.com/) for the icons :)
 
-[Andrzej Mazur](https://end3r.com/) for organizing js13k
+[Andrzej Mazur](https://end3r.com/) for organizing gamedevjs jam :)

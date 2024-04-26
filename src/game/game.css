@@ -1,3 +1,7 @@
+.mono {
+	font-family: monospace;
+}
+
 .game {
 	flex-direction: column;
 	width: 100%;
@@ -6,4 +10,176 @@
 
 .game * {
 	transition: all 0.2s ease-in-out;
+}
+
+.power {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.power .fist {
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	top: 464px;
+}
+
+.power svg {
+	width: 100%;
+	height: 100%;
+}
+
+.power strong {
+	font-size: 48px;
+	color: #fff;
+	position: absolute;
+	top: 400px;
+}
+
+.power span {
+	font-size: 12px;
+	position: absolute;
+	top: 556px;
+}
+
+.power-tap-area {
+	position: absolute;
+	width: 400px;
+	height: 275px;
+	top: 300px;
+	pointer-events: all;
+}
+
+.right-hand {
+	opacity: 0;
+	transform: scaleX(-1) translate(-40px, 0) rotate(20deg);
+}
+
+.two-hands .right-hand {
+	opacity: 1;
+}
+
+.two-hands .left-hand {
+	transform: translate(-40px, 0) rotate(20deg);
+}
+
+.particle {
+	position: absolute;
+}
+
+.plus-power {
+	position: absolute;
+	top: 400px;
+	opacity: 0;
+}
+
+.stories {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	pointer-events: none;
+}
+
+.story {
+	display: flex;
+	flex-direction: column;
+	margin-top: 12px;
+	opacity: 0;
+	transform: scale(0.75) translateY(-50px);
+	transition-duration: 500ms;
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	transition-delay: -250ms;
+	text-align: center;
+}
+
+.story span {
+	font-size: 12px;
+}
+
+.story strong {
+	margin-top: 2px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.story:nth-last-of-type(-n + 5) {
+	opacity: 0.3;
+	transform: scale(1);
+}
+
+.story:nth-last-of-type(-n + 4) {
+	opacity: 0.4;
+	top: 70px;
+}
+
+.story:nth-last-of-type(-n + 3) {
+	opacity: 0.5;
+	top: 120px;
+}
+
+.story:nth-last-of-type(-n + 2) {
+	opacity: 0.6;
+	top: 170px;
+}
+
+.story:nth-last-of-type(-n + 1) {
+	opacity: 1;
+	top: 220px;
+}
+
+.progress-bar.story-progress {
+	position: absolute;
+	top: 280px;
+}
+
+.progress-bar.story-progress .progress {
+	transition: none;
+}
+
+.upgrades {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 32px;
+	gap: 4px;
+	pointer-events: none;
+}
+
+.upgrade {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	pointer-events: all;
+}
+
+.upgrade strong {
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 4px;
+}
+
+.upgrade span {
+	font-size: 16px;
+}
+
+.or-upgrade {
+	font-size: 16px;
+	color: #fff;
+	margin: 4px 0;
 }

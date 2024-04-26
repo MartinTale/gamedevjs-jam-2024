@@ -32,6 +32,7 @@ body {
 	color: #ccc;
 	font-size: 24px;
 	background: var(--bg);
+	overflow: hidden;
 }
 
 small {

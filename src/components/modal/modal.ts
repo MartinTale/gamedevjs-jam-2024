@@ -15,7 +15,9 @@ export function openModal(
 	closeModal();
 
 	const modalOverlay = el("div.modal-overlay");
-	modalOverlay.onclick = () => {
+	modalOverlay.onclick = (e) => {
+		e.stopPropagation();
+		e.preventDefault();
 		closeModal();
 
 		if (onCloseCallback != null) {
@@ -54,10 +56,18 @@ export function openModal(
 		content = el("p", content);
 	}
 
-	modalElement = el("div.modal." + className, [
-		modalOverlay,
-		el("div.modal-container", [el("header", header), el("main", content), el("footer", buttonElements)]),
+	const modalContainer = el("div.modal-container", [
+		el("header", header),
+		el("main", content),
+		el("footer", buttonElements),
 	]);
+
+	modalContainer.onclick = (e) => {
+		e.stopPropagation();
+		e.preventDefault();
+	};
+
+	modalElement = el("div.modal." + className, [modalOverlay, modalContainer]);
 
 	mount(container, modalElement);
 

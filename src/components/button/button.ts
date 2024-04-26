@@ -17,7 +17,9 @@ export function createButton(
 ): HTMLElement {
 	const button = el("button." + type, content) as HTMLButtonElement;
 	button.onclick = (e) => {
-		playSound(sounds.tap);
+		e.stopPropagation();
+		e.preventDefault();
+		playSound(sounds.punch);
 		onClickCallback(e);
 	};
 

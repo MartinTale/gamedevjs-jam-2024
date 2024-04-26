@@ -1,7 +1,7 @@
 import { rng } from "../helpers/numbers";
 import { Signal, createSignal } from "./signals";
 
-const STATE_KEY = "js13kgames-template";
+const STATE_KEY = "red-right-fist";
 
 export type Path = "sound" | "screen";
 
@@ -10,14 +10,33 @@ export type State = {
 	lastProcessedAt: Signal<number>;
 	sound: Signal<boolean | null>;
 	level: Signal<number>;
+	power: Signal<number>;
+	storyIndex: Signal<number>;
+	storyProgress: Signal<number>;
+	fistSpeed: Signal<number>;
+	fistPower: Signal<number>;
+	twoHands: Signal<boolean>;
+	activeUpgradePower: Signal<number>;
+	gameColor: Signal<string>;
+	gameStartTime: Signal<number>;
+	gameEndTime: Signal<number>;
 };
 
 export const emptyState: State = {
-	seed: createSignal(12),
-	// seed: createSignal(Date.now()),
+	seed: createSignal(Date.now()),
 	lastProcessedAt: createSignal(Date.now()),
 	sound: createSignal(null),
 	level: createSignal(0),
+	power: createSignal(0),
+	storyIndex: createSignal(0),
+	storyProgress: createSignal(0),
+	fistSpeed: createSignal(0),
+	fistPower: createSignal(1),
+	twoHands: createSignal(false),
+	activeUpgradePower: createSignal(42),
+	gameColor: createSignal("#444444"),
+	gameStartTime: createSignal(Date.now()),
+	gameEndTime: createSignal(0),
 };
 
 export let state: State;
